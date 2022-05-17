@@ -18,6 +18,20 @@ const registerTransactionSchema = yup.object().shape({
         .required()
 });
 
+const updateTransactionSchema = yup.object().shape({
+    descricao: yup
+        .string(),
+    valor: yup
+        .number(),
+    data: yup
+        .string(),
+    categoria_id: yup
+        .number(),
+    tipo: yup
+        .string()
+});
+
 module.exports = {
-    registerTransactionSchema
+    registerTransactionSchema,
+    updateTransactionSchema
 }

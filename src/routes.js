@@ -19,6 +19,7 @@ route.get('/categoria', listCategories);
 route.post('/transacao', transactions.registerTransaction);
 route.get('/transacao', transactions.listAllTransactions);
 route.get('/transacao/:id', transactions.listATransaction);
-
+route.put('/transacao/:id', transactions.updateTransaction);
+route.delete('/transacao/:id', transactions.deleteTransaction);
 
 module.exports = route;
