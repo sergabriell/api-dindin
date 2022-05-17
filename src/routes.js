@@ -9,6 +9,8 @@ route.post('/usuario', users.registerUser);
 route.post('/login', login);
 
 route.use(verifyUserLogin);
+route.get('/usuario', users.detailUser);
+route.put('/usuario', users.updateUser);
 
 
 module.exports = route;
