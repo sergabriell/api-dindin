@@ -3,6 +3,6 @@ const rota = require('./routes');
 const app = express();
 
 app.use(express.json());
-app.use(rota);
+app.use(route);
 
 module.exports = app;
