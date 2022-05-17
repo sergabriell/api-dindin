@@ -179,10 +179,45 @@ const deleteTransaction = async (req, res) => {
     }
 }
 
+const extractTransaction = async (req, res) => {
+    const user = req.user;
+
+    try {
+        const inputValue = await knex('transacoes')
+            .sum('valor')
+            .where({ tipo: 'entrada', usuario_id: user.id })
+            .first();
+
+        const outputValue = await knex('transacoes')
+            .sum('valor')
+            .where({ tipo: 'saida', usuario_id: user.id })
+            .first();
+
+        let input = 0;
+        let output = 0;
+
+        const inputCounter = inputValue.sum;
+        const outputCounter = outputValue.sum;
+
+        if (inputCounter) {
+            input = inputCounter;
+        }
+
+        if (outputCounter) {
+            output = outputCounter;
+        }
+
+        return res.status(200).json({ entrada: input, saida: output });
+    } catch (error) {
+        return res.status(500).json(error.message);
+    }
+}
+
 module.exports = {
     registerTransaction,
     listAllTransactions,
     listATransaction,
     updateTransaction,
-    deleteTransaction
+    deleteTransaction,
+    extractTransaction
 }

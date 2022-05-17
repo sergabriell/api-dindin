@@ -16,6 +16,7 @@ route.put('/usuario', users.updateUser);
 
 route.get('/categoria', listCategories);
 
+route.get('/transacao/extrato', transactions.extractTransaction);
 route.post('/transacao', transactions.registerTransaction);
 route.get('/transacao', transactions.listAllTransactions);
 route.get('/transacao/:id', transactions.listATransaction);
