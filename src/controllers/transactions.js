@@ -49,7 +49,7 @@ const listAllTransactions = async (req, res) => {
         const transactions = await knex('transacoes')
             .select({
                 id: 'transacoes.id', tipo: 'transacoes.tipo', descricao: 'transacoes.descricao', valor: 'transacoes.valor',
-                usuario_id: 'transacoes.usuario_id', categoria_id: 'categoria_id', categoria_nome: 'categorias.descricao'
+                data: 'data', usuario_id: 'transacoes.usuario_id', categoria_id: 'categoria_id', categoria_nome: 'categorias.descricao'
             })
             .leftJoin('categorias', 'categorias.id', 'transacoes.categoria_id')
             .where({ usuario_id: user.id })
@@ -72,7 +72,7 @@ const listATransaction = async (req, res) => {
         const transaction = await knex('transacoes')
             .select({
                 id: 'transacoes.id', tipo: 'transacoes.tipo', descricao: 'transacoes.descricao', valor: 'transacoes.valor',
-                usuario_id: 'transacoes.usuario_id', categoria_id: 'categoria_id', categoria_nome: 'categorias.descricao'
+                data: 'data', usuario_id: 'transacoes.usuario_id', categoria_id: 'categoria_id', categoria_nome: 'categorias.descricao'
             })
             .leftJoin('categorias', 'categorias.id', 'transacoes.categoria_id')
             .where({ 'transacoes.id': idTransaction, 'transacoes.usuario_id': user.id })
