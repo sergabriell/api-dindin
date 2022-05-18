@@ -1,5 +1,8 @@
 # api-dindin
 
+## Uma API com CRUD de usuários, CRUD de transações, GET de categorias e de Extrato para controlar suas finanças.
+
+
 ##  Link da API: https://api-dindin-project.herokuapp.com
 
 ## **Endpoints**
