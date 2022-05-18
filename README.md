@@ -1,6 +1,11 @@
 # api-dindin
 
 ## Uma API com CRUD de usuários, CRUD de transações, GET de categorias e de Extrato para controlar suas finanças.
+- *Usado bcrypt para criptografar senhas*
+- *Jsonwebtoken para gerar o token de login*
+- *Variáveis de ambiente com o dotenv para proteger dados sensíveis*
+- *Knex como query builder*
+- *Postgres como banco de dados*
 
 
 ##  Link da API: https://api-dindin-project.herokuapp.com
