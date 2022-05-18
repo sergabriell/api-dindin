@@ -6,6 +6,7 @@
 - *Variáveis de ambiente com o dotenv para proteger dados sensíveis*
 - *Knex como query builder*
 - *Postgres como banco de dados*
+- *Yup para tratar erros*
 
 
 ##  Link da API: https://api-dindin-project.herokuapp.com
@@ -488,4 +489,4 @@
 
 ##
 
-###### tags: `back-end` `nodeJS` `Knex` `PostgreSQL` `API REST` `jsonwebtoken` `bcrypt` `dotenv` `deploy`
+###### tags: `back-end` `nodeJS` `Knex` `PostgreSQL` `API REST` `jsonwebtoken` `bcrypt` `dotenv` `Yup` `deploy`
