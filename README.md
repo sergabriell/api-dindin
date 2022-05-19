@@ -1,6 +1,7 @@
 # api-dindin
 
 ## Uma API com CRUD de usuários, CRUD de transações, GET de categorias e de Extrato para controlar suas finanças.
+- *Express*
 - *Usado bcrypt para criptografar senhas*
 - *Jsonwebtoken para gerar o token de login*
 - *Variáveis de ambiente com o dotenv para proteger dados sensíveis*
@@ -489,4 +490,4 @@
 
 ##
 
-###### tags: `back-end` `nodeJS` `Knex` `PostgreSQL` `API REST` `jsonwebtoken` `bcrypt` `dotenv` `Yup` `deploy`
+###### tags: `back-end` `nodeJS` `Knex` `PostgreSQL` `API REST` `jsonwebtoken` `bcrypt` `dotenv` `Yup` `deploy` `Express`
